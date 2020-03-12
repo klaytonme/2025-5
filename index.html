@@ -43,6 +43,7 @@ function onChange(evt){
   } else{
     console.log("answer incorrect");
      $(this).removeClass("correct").addClass("incorrect");
+    new Audio('sound/fail').play()
 
   }
   
