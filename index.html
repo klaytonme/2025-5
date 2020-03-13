@@ -1,8 +1,14 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
 <meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2025</title>
 <style>
 ol{
   background:lightgrey;
@@ -18,12 +24,18 @@ ol{
 </style>
 </head>
 <body translate="no">
-<h1>Math Problems</h1>
+<h1>Chinese Problems</h1>
 <ol>
-<li>2 + 2<input data-correct="4"></li>
-<li>2 + 3<input data-correct="5"></li>
-<li>2<sup>3</sup> <input data-correct="8"></li>
-<li>2<sup>4</sup> <input data-correct="16"></li>
+<li>谢谢<input data-correct="thank you"></li>
+<li>你好<input data-correct="hello"></li>
+<li>再见<input data-correct="goodbye"></li>
+<li>我<input data-correct="me"></li>
+<li>你<input data-correct="you"></li>
+<li>他<input data-correct="them"></li>
+<li>吗<input data-correct="question"></li>
+<li>可以<input data-correct="can"></li>
+<li>要<input data-correct="want/need"></li>
+<li>不<input data-correct="no/not"></li>
 </ol>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script id="rendered-js">
@@ -40,11 +52,11 @@ function onChange(evt){
   if(correct == response){
     console.log("answer correct")
     $(this).removeClass("incorrect").addClass("correct");
+ new Audio('https://www.freesoundslibrary.com/wp-content/uploads/2018/01/ding-sound-effect.mp3').play()  
   } else{
     console.log("answer incorrect");
      $(this).removeClass("correct").addClass("incorrect");
-    new Audio('sound/fail.mp3').play()
-
+new Audio('https://www.freesoundslibrary.com/wp-content/uploads/2017/10/wah-wah-wah-sound-effect.mp3').play()
   }
   
 }
