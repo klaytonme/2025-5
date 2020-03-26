@@ -52,7 +52,7 @@ function onChange(evt){
   if(correct == response){
     console.log("answer correct")
     $(this).removeClass("incorrect").addClass("correct");
- new Audio('https://www.freesoundslibrary.com/wp-content/uploads/2018/01/ding-sound-effect.mp3').play()  
+ new Audio('sound/fail.mp3').play()  
   } else{
     console.log("answer incorrect");
      $(this).removeClass("correct").addClass("incorrect");
