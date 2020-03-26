@@ -26,7 +26,7 @@ ol{
 <body translate="no">
 <h1>Chinese Problems</h1>
 <ol>
-<li>谢谢<input data-correct="thank you"></li>
+<li>谢谢<input data-correct="thank you" data-recording="Recording (2).m4a></li>
 <li>你好<input data-correct="hello"></li>
 <li>再见<input data-correct="goodbye"></li>
 <li>我<input data-correct="me"></li>
@@ -52,7 +52,7 @@ function onChange(evt){
   if(correct == response){
     console.log("answer correct")
     $(this).removeClass("incorrect").addClass("correct");
- new Audio('sound/Recording (2).m4a').play()  
+ new Audio('sound/'+$(this).data("recording")).play()  
   } else{
     console.log("answer incorrect");
      $(this).removeClass("correct").addClass("incorrect");
