@@ -48,8 +48,9 @@ function onChange(evt){
   if(correct == response){
     console.log("answer correct")
     $(this).removeClass("incorrect").addClass("correct");
- console.log('sound/'+$(this).data('recording'));
- new Audio('sound/'+$(this).data("recording")).play()  
+    let recording = $(this).data("recording")
+ console.log('sound/'+recording);
+ new Audio('sound/'+recording).play()  
   } else{
     console.log("answer incorrect");
      $(this).removeClass("correct").addClass("incorrect");
